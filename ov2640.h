@@ -25,8 +25,11 @@ struct ov2640_config {
 };
 
 void ov2640_init(struct ov2640_config *config);
+void ov2640_jpeg_init(struct ov2640_config *config);
+void ov2640_uxga_cif_init(struct ov2640_config *config);
 
 void ov2640_capture_frame(struct ov2640_config *config);
+int32_t ov2640_get_jpeg_size(struct ov2640_config *config);
 
 void ov2640_reg_write(struct ov2640_config *config, uint8_t reg, uint8_t value);
 uint8_t ov2640_reg_read(struct ov2640_config *config, uint8_t reg);
